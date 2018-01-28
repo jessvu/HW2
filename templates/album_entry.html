@@ -1,0 +1,29 @@
+<!-- {% block content %}
+  <h1>Simple WTF-Form</h1>
+  <form method="POST" action="http://localhost:5000/album_entry">
+      {{ form.hidden_tag() }}
+      {% for message in get_flashed_messages() %}
+      {{ message }}
+      {% endfor %}
+      <p>{{ form.name.label }}{{ form.name() }}</p>
+      <p>{{ form.rating.label }}{{ form.rating() }}</p>
+      {{ form.submit() }}
+  </form>
+{% endblock %}
+ -->
+<html>
+<title>
+</title>
+<body>
+<form method = "POST" action="http://localhost:5000/album_result">
+  {{ form.hidden_tag() }}
+  {% for message in get_flashed_messages() %}
+  {{ message }}
+  {% endfor %}
+<h3>Enter album name : {{ form.name() }}</h3>
+<h3>How much do you like this album? {{ form.rating }}</h3>
+{{ form.submit() }}
+</form>
+</body>
+</html>
+
